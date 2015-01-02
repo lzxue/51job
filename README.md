@@ -1,14 +1,17 @@
 ###下载51job招聘信息的爬虫程序
-1.程序使用NodeJS编写，运行安装nodejs
-2.下载的数据存储在文本文档中以&字符为分隔符，一条招聘信息为一行数据。
-3.下载51job招聘信息，jobid，companyid 公司简介，岗位简介，经纬度等
-4. [原数据来自51job地图搜索](http://search.51job.com/jobsearch/search_result.php?fromJs=1&jobarea=010000&industrytype=00&issuedate=9&keywordtype=2&lang=c&stype=3&address=%E4%B8%AD%E5%85%B3%E6%9D%91&radius=0.03&fromType=20)
-  可根据自身需要修改url参数实现分类下载招聘数据。
+ 1.程序使用NodeJS编写，运行安装nodejs
 
-地区查询一次下载整个地区的数据，程序中默认将查询半径设radius置1000(100000公里)旨在获取该地区的所有数据。但是数据最多返回10w条，向北京这样城市
-超过10w条数据因此需要设置多个中心点然后去重。
+ 2.下载的数据存储在文本文档中以&字符为分隔符，一条招聘信息为一行数据。
 
-下载参数config,json中
+ 3.下载51job招聘信息，jobid，companyid 公司简介，岗位简介，经纬度等
+
+ 
+
+ [原数据来自51job地图搜索](http://search.51job.com/jobsearch/search_result.php?fromJs=1&jobarea=010000&industrytype=00&issuedate=9&keywordtype=2&lang=c&stype=3&address=%E4%B8%AD%E5%85%B3%E6%9D%91&radius=0.03&fromType=20) 可根据自身需要修改url参数实现分类下载招聘数据。
+
+地区查询一次下载整个地区的数据，程序中默认将查询半径设radius置1000(100000公里)旨在获取该地区的所有数据。但是数据最多返回10w条，向北京这样城市超过10w条数据因此需要设置多个中心点然后去重。
+
+下载参数设置在config,json中 
   
      {
    
@@ -77,8 +80,11 @@ windows下启动，修改下载参数，双击startapp.cmd 开始下载
 		</tr>                       
  
 ***
-**codestr即为参数中的jobarea **
-address 原网站 http://search.51job.com/list/010000%252C00,000000,0000,00,9,99,%2B,0,1.html?lang=c&stype=3&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=01&companysize=99&address=%D6%D0%B9%D8%B4%E5&lonlat=116.323066%2C39.989956&radius=0.05&ord_field=1&list_type=1&confirmdate=9&fromType=10
-选取该城市的任何一个 中心即可。
+
+ **codestr即为参数中的**jobarea
+
+  address为 原网站 http://search.51job.com/list/010000%252C00,000000,0000,00,9,99,%2B,0,1.html?lang=c&stype=3&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=01&companysize=99&address=%D6%D0%B9%D8%B4%E5&lonlat=116.323066%2C39.989956&radius=0.05&ord_field=1&list_type=1&confirmdate=9&fromType=10选取该城市的任何一个 中心即可。
+
+***
 数据导入excel示例
 ![gis](http://thinkgis.qiniudn.com/sinajobxx.png)
