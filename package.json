@@ -1,0 +1,32 @@
+{
+  "name": "51job",
+  "version": "0.0.1",
+  "description": "51job招聘信息下载",
+  "main": "app.js",
+  "dependencies": {
+    "bufferhelper": "^0.2.0",
+    "async": "^0.2.9",
+    "cheerio": "^0.12.2",
+    "iconv-lite": "^0.2.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lzxue/51job"
+  },
+  "keywords": [
+    "thinkgis",
+    "gis",
+    "招聘信息",
+    "51job"
+  ],
+  "author": "lzxue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lzxue/51job/issues"
+  },
+  "homepage": "https://github.com/lzxue/51job"
+}
